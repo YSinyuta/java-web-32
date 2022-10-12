@@ -26,6 +26,6 @@ function modifyStudent(){
         return;
     }
 
-    document.getElementById("hiddenModify").value = checkedCheckboxs[i].value;
+    document.getElementById("hiddenModify").value = checkedCheckboxs[0].value;
     document.getElementById('formModify').submit();
 }

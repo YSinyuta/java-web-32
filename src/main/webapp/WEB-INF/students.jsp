@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/styles.css">
-    <script src = "../resources/js/fucntions.js"></script>
+    <script src="../resources/js/fucntions.js"></script>
     <title>Система управления студентами и их успеваемостью</title>
 </head>
 
@@ -17,7 +17,14 @@
     <div class="header">
         <div class="left-side"></div>
         <div id="title"><h1>Система управления студентами и их успеваемостью</h1></div>
-        <div class=" right-side blue-button logout"><span><a href="">Logout</a></span></div>
+        <div class=" right-side blue-button logout"><span><c:choose>
+            <c:when test="${islogin eq true}">
+                <a href="/logout">Logout</a>
+            </c:when>
+            <c:otherwise>
+                <a href="/login">Login</a>
+            </c:otherwise>
+        </c:choose></span></div>
     </div>
     <div class="main">
         <div class="left-side">
@@ -30,22 +37,24 @@
                     <button type="submit" class="grey-button-top">Просмотреть успеваемость выбранных студентов</button>
                 </div>
                 <div>
-                    <form action="/student-create" method="get">
-                        <input type="submit" value="Создать студента..."
-                               class="grey-button-top"/>
-
-                    </form>
+                    <c:if test="${role eq 1}">
+                        <form action="/student-create" method="get">
+                            <input type="submit" value="Создать студента..."
+                                   class="grey-button-top"/>
+                        </form>
+                    </c:if>
                 </div>
             </div>
-            <div class="center-top-buttons">
-                <div>
-                    <input type = "submit" onclick="modifyStudent()" class="grey-button-top" value = "Модифицировать выбранного студента"/></div>
+            <c:if test="${role eq 1}">
+                <div class="center-top-buttons">
+                    <div>
+                        <input type="submit" onclick="modifyStudent()" class="grey-button-top"
+                               value="Модифицировать выбранного студента"/>
+                    </div>
+                    <div><input type="submit" onclick="deleteStudents()" class="grey-button-top"
+                                value="Удалить выбранных студентов..."/></div>
                 </div>
-                <div>
-                    <div><input type = "submit" onclick="deleteStudents()" class="grey-button-top" value = "Удалить выбранных студентов..."/></div>
-                </div>
-            </div>
-
+            </c:if>
             <div><b class="text">Список студентов</b></div>
             <div>
                 <form method="get">
@@ -77,10 +86,10 @@
         <div class="right-side blue-button"><span></span></div>
     </div>
 </div>
-<form action="/student-delete" method="post" id = "formDelete">
-    <input type = "hidden" value="" name="hiddenDelete" id ="hiddenDelete">
+<form action="/student-delete" method="post" id="formDelete">
+    <input type="hidden" value="" name="hiddenDelete" id="hiddenDelete">
 </form>
-<form action="/student-modify" method="get" id = "formModify">
-    <input type = "hidden" value="" name="hiddenModify" id ="hiddenModify">
+<form action="/student-modify" method="get" id="formModify">
+    <input type="hidden" value="" name="hiddenModify" id="hiddenModify">
 </form>
 </body>

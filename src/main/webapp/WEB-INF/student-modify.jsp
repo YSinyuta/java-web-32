@@ -25,7 +25,14 @@
     <div class="header">
         <div class="left-side"></div>
         <div id="title"><h1>Система управления студентами и их успеваемостью</h1></div>
-        <div class=" right-side blue-button logout"><span><a href="">Logout</a></span></div>
+        <div class=" right-side blue-button logout"><span><c:choose>
+            <c:when test="${islogin eq true}">
+                <a href="/logout">Logout</a>
+            </c:when>
+            <c:otherwise>
+                <a href="/login">Login</a>
+            </c:otherwise>
+        </c:choose></span></div>
     </div>
     <div class="main">
         <div class="left-side blue-button"><div class="blue-button"><a href="/">На главную</a></div><div class="blue-button"><a href="./students_list.html">Назад</a></div></div>
@@ -37,12 +44,10 @@
                     <p>Фамилия <input value="${student.surname}" type="text" size="40"></p>
                     <p>Имя <input value="${student.name}" type="text" size="40"></p>
                     <p>Группа <input value="${student.group}" type="text" size="40"></p>
-                    <p>Дата поступления <input id ="datepicker" name="date" value="f:formatDate value="${s.date}" pattern="dd/MM/yyyy"/></td>${student.date}"type="text" size="40"></p>
+                    <p>Дата поступления <input id ="datepicker" name="date" value="<f:formatDate value="${student.date}" pattern="dd/MM/yyyy"/>" type="text" size="40"></p>
                 </div>
-                <div><input type="submit" value="Создать" class="grey-button"/><div style="width: 299px;"></div></div>
-
+                <div><input type="submit" value="Применить" class="grey-button"/><div style="width: 299px;"></div></div>
             </form>
-
         </div>
         <div class="right-side blue-button"><span></span></div>
     </div>

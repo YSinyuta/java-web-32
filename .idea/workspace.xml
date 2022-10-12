@@ -9,7 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6efbe879-ab46-4190-b869-3c741a1f8383" name="Changes" comment="Web project" />
+    <list default="true" id="6efbe879-ab46-4190-b869-3c741a1f8383" name="Changes" comment="Web project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/LogoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/TermController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/filters/EncodingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/filters/LoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/terms.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StudentCreateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentCreateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/StudentModifyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/StudentModifyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DBServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DBServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplines.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/disciplines.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/student-create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/student-create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/student-modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/student-modify.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/students.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/students.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/fucntions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/fucntions.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,16 +67,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/java-web-32/src/main/webapp/WEB-INF",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/java-web-32/src/main/webapp/WEB-INF&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\java-web-32\src\main\webapp\WEB-INF" />
@@ -175,7 +197,11 @@
       <workItem from="1664474438204" duration="1762000" />
       <workItem from="1664555021102" duration="594000" />
       <workItem from="1664814107445" duration="7515000" />
-      <workItem from="1664898767641" duration="2020000" />
+      <workItem from="1664898767641" duration="11399000" />
+      <workItem from="1665073364017" duration="9001000" />
+      <workItem from="1665082995722" duration="136000" />
+      <workItem from="1665418939776" duration="8704000" />
+      <workItem from="1665595134515" duration="9882000" />
     </task>
     <task id="LOCAL-00001" summary="Web project">
       <created>1664900932869</created>
@@ -198,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664901268870</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Web project">
+      <created>1664901405382</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664901405382</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +242,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

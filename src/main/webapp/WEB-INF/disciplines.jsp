@@ -14,7 +14,14 @@
   <div class="header">
     <div class="left-side"></div>
     <div id="title"><h1>Система управления студентами и их успеваемостью</h1></div>
-    <div class=" right-side blue-button logout"><span><a href="">Logout</a></span></div>
+    <div class=" right-side blue-button logout"><span><c:choose>
+      <c:when test="${islogin eq true}">
+        <a href="/logout">Logout</a>
+      </c:when>
+      <c:otherwise>
+        <a href="/login">Login</a>
+      </c:otherwise>
+    </c:choose></span></div>
   </div>
   <div class="main">
     <div class="left-side"><div class="blue-button"><a href="/">На главную</a></div><div class="blue-button"></div></div>

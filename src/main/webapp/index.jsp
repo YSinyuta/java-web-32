@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -14,14 +14,22 @@
     <div class="header">
         <div class="left-side"></div>
         <div id="title"><h1>Система управления студентами и их успеваемостью</h1></div>
-        <div class=" right-side blue-button logout"><span><a href="">Logout</a></span></div>
+        <div class=" right-side blue-button logout"><span>
+            <c:choose>
+            <c:when test="${islogin eq true}">
+                <a href="/logout">Logout</a>
+            </c:when>
+            <c:otherwise>
+                <a href="/login">Login</a>
+            </c:otherwise>
+        </c:choose></span></div>
     </div>
     <div class="main">
         <div class="left-side"><div class="blue-button"></div><div class="blue-button"></div></div>
         <div class="center-title">
             <div id="left-button"><a href="/students">Студенты</a></div>
             <div id="center-button"><a href="/disciplines">Дисциплины</a></div>
-            <div id="right-button"><a href="">Семестры</a></div>
+            <div id="right-button"><a href="/terms">Семестры</a></div>
         </div>
         <div class="right-side blue-button"><span></span></div>
     </div>
